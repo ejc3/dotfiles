@@ -1,0 +1,18 @@
+# Minimal single-line prompt
+format = "$directory$git_branch$git_status$character"
+add_newline = false
+
+[directory]
+truncation_length = 3
+
+[git_branch]
+format = "[$branch]($style) "
+# Hide if on main/master
+ignore_branches = ["main", "master"]
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
